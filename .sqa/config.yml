@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/argo-scg:
+      branch: master
+      repo: https://github.com/ARGOeu/argo-scg
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/argo-scg git:
+        commands:
+        - /usr/bin/env sh .sqa/script.clove_feisty_tiger.sh
+        container: qc.acc_alabaster_romantic_cobra
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/argo-scg find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.smoke_open_grizzly.sh
+        container: qc.doc_watermelon_peaceful_goose
+      github.com/ARGOeu/argo-scg git:
+        commands:
+        - /usr/bin/env sh .sqa/script.peony_sarcastic_walrus.sh
+        container: qc.doc_echelon_melancholy_chipmunk
+      github.com/ARGOeu/argo-scg markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.espresso_calm_turtle.sh
+        container: qc.doc_salmon_resilient_komodo
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/argo-scg licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.avocado_brilliant_jaguar.sh
+        container: qc.lic_pink_spontaneous_roc
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/argo-scg bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.slate_realistic_octopus.sh
+        container: qc.sec_cinnabar_diplomatic_spider
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/argo-scg flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.wine_sympathetic_hippopotamus.sh
+        container: qc.sty_onyx_stubborn_capybara
+  QC.Uni:
+    repos:
+      github.com/ARGOeu/argo-scg pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.mustard_hopeful_thrush.sh
+        container: qc.uni_bronze_tolerant_echidna
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/argo-scg get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chartreuse_helpful_wombat.sh
+        container: qc.ver_walnut_zealous_llama
+timeout: 5400

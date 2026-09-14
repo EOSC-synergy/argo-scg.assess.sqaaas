@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-scg git:
         commands:
-        - /usr/bin/env sh .sqa/script.nutmeg_proactive_seal.sh
-        container: qc.acc_indigo_proactive_crane
+        - /usr/bin/env sh .sqa/script.pineapple_philosophical_grasshopper.sh
+        container: qc.acc_linen_innocent_kraken
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-scg find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.rose_authentic_mandrill.sh
-        container: qc.doc_ultramarine_calm_moose
+        - /usr/bin/env sh .sqa/script.chocolate_zealous_newt.sh
+        container: qc.doc_denim_feisty_nighthawk
       github.com/ARGOeu/argo-scg git:
         commands:
-        - /usr/bin/env sh .sqa/script.hunter_shy_turtle.sh
-        container: qc.doc_thistle_cheerful_raccoon
+        - /usr/bin/env sh .sqa/script.storm_forgiving_dingo.sh
+        container: qc.doc_linen_amused_hornbill
       github.com/ARGOeu/argo-scg markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fern_rugged_antelope.sh
-        container: qc.doc_blush_realistic_skunk
+        - /usr/bin/env sh .sqa/script.ochre_ardent_penguin.sh
+        container: qc.doc_flint_blissful_wasp
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-scg licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gold_serene_kraken.sh
-        container: qc.lic_pineapple_witty_baboon
+        - /usr/bin/env sh .sqa/script.flax_sociable_boa.sh
+        container: qc.lic_emerald_relaxed_barracuda
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-scg bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.orange_persistent_nighthawk.sh
-        container: qc.sec_mauve_stoic_seahorse
+        - /usr/bin/env sh .sqa/script.viridian_mature_hummingbird.sh
+        container: qc.sec_green_artistic_spren
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-scg flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.amethyst_candid_hamster.sh
-        container: qc.sty_amaranth_dramatic_tarantula
+        - /usr/bin/env sh .sqa/script.daffodil_mysterious_albatross.sh
+        container: qc.sty_cerulean_skeptical_octopus
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-scg pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.sand_decisive_groundhog.sh
-        container: qc.uni_salmon_generous_panther
+        - /usr/bin/env sh .sqa/script.slate_independent_toucan.sh
+        container: qc.uni_eggplant_nurturing_emu
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-scg get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.papaya_melancholy_anaconda.sh
-        container: qc.ver_chocolate_humorous_groundhog
+        - /usr/bin/env sh .sqa/script.vermilion_industrious_seahorse.sh
+        container: qc.ver_lemon_brilliant_parrot
 timeout: 5400
